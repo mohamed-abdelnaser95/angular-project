@@ -1,0 +1,21 @@
+.sig{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    border: 3px solid rgba(2, 5, 199, 0.753);
+    background-color: rgb(219, 218, 218);
+    padding: 40px;
+    width: 40vw;
+    // margin: 30px;
+    border-radius: 25px;
+    margin-top: 20vh;
+
+}
+label{
+    padding-right: 100px;
+}
+input{
+    border: 2px solid rgb(70, 69, 69);
+}

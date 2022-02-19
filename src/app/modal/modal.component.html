@@ -1,0 +1,18 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <button type="button" class="btn-danger rounded btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">x</button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="mb-3">
+        Are you sure you want to delete doctor?
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="modal.dismiss('Cross click')">Close</button>
+    <button type="button" class="btn btn-danger" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>
+<button class="btn btn-danger" (click)="open(content)">Delete</button>

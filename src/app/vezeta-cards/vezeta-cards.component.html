@@ -1,0 +1,33 @@
+<main class="container mt-3 ">
+    <div class="row justify-content-between">
+
+        <div *ngFor="let i of doctors" class="col-lg-4">
+            <div class="card">
+                <img class="card-img-top" width="150px" height="320px" src="./assets/{{image}}.PNG"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h4><span> Name </span> : {{i.name}} </h4>
+                    <h5><span>Rate :</span> : {{i.rate}} <i class="fa-solid fa-star"></i> </h5>
+
+                    <h5> <span> Phone Number :</span> {{i.phone}} </h5>
+                    <h5> <span> Specialization :</span> {{i.specialization}} </h5>
+                    <h5> <span> Fees :</span> {{i.fees}} </h5>
+
+                    <div *ngIf="i.available">
+                        <label class="btn btn-primary ml-3">
+                            <input style="background-color: transparent; border: none;"  type="button" name="options" id="option2" value = "Available">
+                        </label>
+                    </div>
+                    <div *ngIf="!i.available">
+                        <label class="btn btn-primary ml-3">
+                            <input style="background-color: transparent; border: none;"  type="button" name="options" id="option2" value = "Not Available">
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- <div *ngFor="let item of doctors">{{item.name}}</div> -->
+
+    </div>
+</main>

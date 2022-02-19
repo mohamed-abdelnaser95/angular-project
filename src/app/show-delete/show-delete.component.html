@@ -1,0 +1,34 @@
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">No.</th>
+                <th scope="col">Name</th>
+                <th scope="col">Discription</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Specialization</th>
+                <th scope="col">Fees</th>
+                <th scope="col">Rate</th>
+                <th scope="col">Available</th>
+                <th scope="col">Edite</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of doctors;let i=index">
+                <th scope="row">{{i + 1}}</th>
+                <td> {{item.name}}</td>
+                <td> {{item.discription}}</td>
+                <td> {{item.phone}}</td>
+                <td> {{item.specialization}}</td>
+                <td> {{item.rate}}</td>
+                <td> {{item.fees}}</td>
+                <td> {{item.available}}</td>
+                <td><button type="button" class="btn btn-success" [routerLink]="'/edite/' + item._id">Edite</button>
+                </td>
+                <td>
+                <td><button type="button" class="btn btn-danger" (click)="deleteData(item._id)">DELETE</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,33 @@
+.mydiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+form {
+    background-color: rgb(235, 230, 230);
+  border: 3px solid rgb(0, 14, 209);
+  border-radius: 20px;
+  width: 50vw;
+  padding: 39px;
+  margin: 30px;
+}
+
+.addres{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    input{
+        margin: 5px;
+    }
+}
+h2{
+    text-align: center;
+    color: rgba(23, 23, 202, 0.733);
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+input{
+    border: 2px solid rgba(116, 116, 124, 0.699);
+}

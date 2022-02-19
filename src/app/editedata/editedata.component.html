@@ -1,0 +1,78 @@
+<div class="mydiv">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <h2> Edite Doctor </h2>
+        <!-- <h5>{{myForm.value | json}}</h5> -->
+        <div class="form-group">
+            <label for="formGroupExampleInput">Doctor Name</label>
+            <input type="text" class="form-control" formControlName="name" id="formGroupExampleInput"
+                placeholder="Doctor Name">
+            <div class="text-danger" *ngIf="myForm.controls.name.errors?.required && myForm.controls.name.touched">
+                doctor name required</div>
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Discription</label>
+            <input type="text" class="form-control" formControlName="discription" id="formGroupExampleInput"
+                placeholder="write the discription of the doctor">
+            <div class="text-danger"
+                *ngIf="myForm.controls.discription.errors?.required && myForm.controls.discription.touched">
+                discription of doctor required</div>
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Phone</label>
+            <input type="text" class="form-control" formControlName="phone" id="formGroupExampleInput"
+                placeholder="doctor phone">
+            <div class="text-danger" *ngIf="myForm.controls.phone.errors?.required && myForm.controls.phone.touched">
+                doctor phone required</div>
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Specialization</label>
+            <input type="text" class="form-control" formControlName="specialization" id="formGroupExampleInput"
+                placeholder="doctor specialization">
+            <div class="text-danger"
+                *ngIf="myForm.controls.specialization.errors?.required && myForm.controls.specialization.touched">
+                doctor specialization required</div>
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Rate</label>
+            <input type="text" class="form-control" formControlName="rate" id="formGroupExampleInput"
+                placeholder="doctor rate">
+            <div class="text-danger" *ngIf="myForm.controls.rate.errors?.required && myForm.controls.rate.touched">
+                doctor rate required</div>
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Fees</label>
+            <input type="text" class="form-control" formControlName="fees" id="formGroupExampleInput"
+                placeholder="doctor fees">
+            <div class="text-danger" *ngIf="myForm.controls.fees.errors?.required && myForm.controls.fees.touched">
+                doctor fees required</div>
+        </div>
+        <!-- <div class="btn-group btn-group-toggle mb-1 ml-3" data-toggle="buttons">
+            <label class="btn btn-primary active">
+                <input  type="radio" name="options" id="option1" checked> Active
+            </label>
+            <label class="btn btn-primary ml-3">
+                <input  type="radio" name="options" id="option2"> Radio
+            </label>
+        </div>
+        <br> -->
+
+
+        <!-- <hr>
+        <label for="formGroupExampleInput1">Address</label> <br>
+        <div class="form-group addres" formGroupName="address">
+
+            <input type="text" class="form-control" formControlName="Governorate" id="formGroupExampleInput1"
+                placeholder="Your Governorate">
+            <div class="text-danger" *ngIf="myForm.controls.Governorate.errors?.required && myForm.controls.Governorate.touched">
+                Password is
+                required & less than 8 letter</div>
+            <input type="text" class="form-control" formControlName="Center" id="formGroupExampleInput1"
+                placeholder="Your Center">
+            <input type="text" class="form-control" formControlName="Street" id="formGroupExampleInput1"
+                placeholder="Your Street">
+        </div> -->
+
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+
+</div>
